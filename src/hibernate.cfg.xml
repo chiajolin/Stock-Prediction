@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+	
+<hibernate-configuration> 
+
+    <session-factory> 
+
+    <!-- SHOW EXECUTED SQL --> 
+    <property name="show_sql">true</property> 
+    <!-- FORMAT SQL -->
+    <property name="format_sql">true</property>
+    <!-- SQL DIALECT--> 
+    <property name="dialect">org.hibernate.dialect.MySQLDialect</property> 
+    <!-- JDBC DRIVER --> 
+    <property name="connection.driver_class">com.mysql.jdbc.Driver</property> 
+    <!-- JDBC URL --> 
+    <property name="connection.url">jdbc:mysql://localhost/StockTestDatabase?createDatabaseIfNotExist=true</property> 
+    <!-- DATABASE USERNAME --> 
+    <property name="connection.username">root</property> 
+    <!-- DATABASE PASSWORD --> 
+    <property name="connection.password">1119</property> 
+    <!-- update database if database tables are already created and create if database tables are not created -->
+    <property name="hibernate.hbm2ddl.auto">update</property>
+
+    <!-- MAPPING -->
+    <mapping class="models.ManageUserBean"/> 
+ 
+    </session-factory> 
+
+</hibernate-configuration>
